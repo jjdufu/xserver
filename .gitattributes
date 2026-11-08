@@ -1,4 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-
 *.sh text eol=lf
+rootfs/system/lib64/*.so filter=lfs diff=lfs merge=lfs -text
+rootfs/system/bin/* filter=lfs diff=lfs merge=lfs -text
+rootfs/system/usr/share/zoneinfo/* filter=lfs diff=lfs merge=lfs -text
